@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="app/src/main/assets/logo.png" width="50">
+  <img src="app/src/main/assets/logo.png" width="150">
   GetMediBD
 </h1>
 
