@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  An Android marketplace connecting customers with verified pharmacies.
+  An Android marketplace connecting customers with verified pharmacies .
 </p>
 
 <p align="center">
