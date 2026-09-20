@@ -193,16 +193,14 @@ The package contains the required software and files needed for the development 
 
 ---
 
-## 2. Install the Required Environment
+## 2. Install the Required IDE (Neatbean)
 
 Install the required software from the provided Google Drive package.
 
 After installation:
 
-1. Open Android Studio.
-2. Make sure Android Studio starts correctly.
-3. Make sure the required Java/Android components are available.
-4. Make sure an Android emulator or physical Android device is available for testing.
+1. Open neatbean.
+2. Make sure neatbean starts correctly.
 
 Do not create a new Android project.
 
@@ -235,7 +233,7 @@ https://github.com/Naim-006/GetMediBD
 
 ## 4. Open the Project
 
-Open Android Studio.
+Open neatbean.
 
 Select:
 
