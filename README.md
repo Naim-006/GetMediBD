@@ -31,7 +31,7 @@
 
 ## About
 
-**GetMedBD** is an Android-based multi-vendor pharmacy marketplace designed to connect customers with verified pharmacies through a single platform.
+**GetMediBD** is an Android-based multi-vendor pharmacy marketplace designed to connect customers with verified pharmacies through a single platform.
 
 Customers can discover medicines, compare pharmacy availability, upload prescriptions, place orders, make payments, and track their purchases.
 
