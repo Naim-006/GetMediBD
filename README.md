@@ -1,4 +1,7 @@
-# GetMedBD
+<h1 align="center">
+  <img src="assets/logo.png" width="50">
+  GetMediBD
+</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
