@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-# GetMediBD
-=======
+---
+
 <h1 align="center">
   <img src="app/src/main/assets/logo.png" width="36">
   GetMediBD
 </h1>
->>>>>>> Branch--Ajmine
+---
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
