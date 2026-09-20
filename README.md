@@ -1,241 +1,380 @@
-# 💊 GetMedBD
+# GetMedBD
 
-### Multi-Vendor Online Pharmacy Marketplace
+<p align="center">
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</p>
 
-GetMedBD is an Android-based multi-vendor pharmacy marketplace designed to connect customers with verified pharmacies. Customers can search for medicines, compare available pharmacies, upload prescriptions, place orders, make payments, and track their orders.
+<p align="center">
+  <strong>Multi-Vendor Online Pharmacy Marketplace</strong>
+</p>
 
-The platform has four main portals:
+<p align="center">
+  An Android marketplace connecting customers with verified pharmacies.
+</p>
 
-* 👤 **Customer**
-* 🏪 **Shop / Pharmacy**
-* 🛠️ **Admin**
-* 👑 **SuperAdmin**
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#features">Features</a> •
+  <a href="#technology-stack">Technology</a> •
+  <a href="#setup">Setup</a> •
+  <a href="#team-workflow">Team Workflow</a> •
+  <a href="#development-roadmap">Roadmap</a>
+</p>
 
 ---
 
-## 🚀 Main Features
+## About
 
-### 👤 Customer
+**GetMedBD** is an Android-based multi-vendor pharmacy marketplace designed to connect customers with verified pharmacies through a single platform.
 
-* Create account and login
-* Search and browse medicines
-* View medicine details
-* Compare medicines from different pharmacies
-* Find nearby pharmacies
-* Upload prescriptions
+Customers can discover medicines, compare pharmacy availability, upload prescriptions, place orders, make payments, and track their purchases.
+
+Pharmacies can manage their products, inventory, orders, prescriptions, and sales through their own shop portal.
+
+The platform contains four portals:
+
+| Portal              | Description                                                                                 |
+| ------------------- | ------------------------------------------------------------------------------------------- |
+| **Customer**        | Browse medicines, compare pharmacies, order products, manage prescriptions and track orders |
+| **Shop / Pharmacy** | Manage pharmacy profile, medicines, inventory, orders and sales                             |
+| **Admin**           | Manage marketplace operations, users, pharmacies, medicines and orders                      |
+| **SuperAdmin**      | Manage administrators, permissions and system-wide configuration                            |
+
+---
+
+# Features
+
+## Customer Portal
+
+* User registration and authentication
+* Medicine search and discovery
+* Medicine details
+* Generic and brand-based search
+* Pharmacy-based medicine availability
+* Pharmacy price comparison
+* Nearby pharmacy discovery
+* Prescription upload
 * AI-assisted prescription analysis
-* Add medicines to cart
-* Place orders
+* Shopping cart
+* Multi-pharmacy ordering
 * Online payment
 * Order history
 * Order tracking
-* Pharmacy ratings and reviews
+* Saved addresses
+* Favourite medicines and pharmacies
+* Ratings and reviews
 * Notifications
-* Saved addresses and favourites
+* Medicine reordering
 
-### 🏪 Shop / Pharmacy
+## Shop / Pharmacy Portal
 
 * Pharmacy registration
+* Pharmacy document submission
 * Pharmacy verification
-* Manage pharmacy profile
-* Add and manage medicines
-* Manage inventory and stock
-* Manage prices
-* Receive customer orders
-* Process orders
-* Handle prescription orders
-* View sales and earnings
-* Manage reviews
+* Pharmacy profile management
+* Medicine management
+* Inventory management
+* Stock management
+* Price management
+* Order management
+* Prescription order handling
+* Sales and earnings
+* Customer reviews
 * Notifications
 
-### 🛠️ Admin
+## Admin Portal
 
-* Manage customers
-* Review and verify pharmacies
-* Manage medicines and categories
-* Manage orders
-* Monitor prescriptions
-* Manage payments
-* Handle complaints and disputes
-* Manage pharmacy activity
-* View marketplace reports and analytics
+* Customer management
+* Pharmacy management
+* Pharmacy verification
+* Medicine management
+* Category management
+* Order monitoring
+* Prescription monitoring
+* Payment management
+* Commission management
+* Complaint management
+* Dispute management
+* Reports
+* Analytics
 
-### 👑 SuperAdmin
+## SuperAdmin Portal
 
-* Manage Admin accounts
-* Manage Admin permissions
-* Control platform settings
-* Manage marketplace configuration
-* View system activity
-* View audit logs
-* Manage critical platform operations
-
----
-
-## 🛠️ Technology
-
-* **Android**
-* **Java**
-* **Android Studio**
-* **Supabase**
-
-  * Authentication
-  * PostgreSQL Database
-  * Storage
-  * Realtime
-* **Firebase Cloud Messaging**
-* **Google Maps**
-* **AI API**
-* **Git**
-* **GitHub**
-
-No VPS or Docker is required for the initial project setup.
+* Admin account management
+* Admin permissions
+* Role-based access control
+* Platform configuration
+* Marketplace configuration
+* System monitoring
+* Audit logs
+* Security management
+* System-wide analytics
 
 ---
 
-# 📥 Team Setup
+# Technology Stack
 
-Before starting development, everyone must have the required project environment.
+### Mobile Application
 
-## 1. Download the Required Software
+<p>
+  <img src="https://skillicons.dev/icons?i=java,androidstudio" />
+</p>
 
-Download and install the required software from the **Google Drive provided by the team**.
+* Java
+* Android Studio
+* Android SDK
+* XML
+* Material Design
 
-Make sure the required Android/Java development setup provided by the team is installed correctly.
+### Backend & Database
 
-> If your required setup is already installed and working, **skip this section**.
+<p>
+  <img src="https://skillicons.dev/icons?i=supabase,postgresql" />
+</p>
+
+* Supabase Authentication
+* Supabase PostgreSQL
+* Supabase Storage
+* Supabase Realtime
+
+### Additional Services
+
+<p>
+  <img src="https://skillicons.dev/icons?i=firebase" />
+</p>
+
+* Firebase Cloud Messaging
+* Google Maps
+* AI API
+* Payment Gateway
+
+### Development Tools
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github" />
+</p>
+
+* Git
+* GitHub
+* GitHub Pull Requests
+
+> **Infrastructure:** No VPS or Docker is required for the initial project setup.
 
 ---
 
-# 🔧 2. Setup the Project
+# Setup
 
-After installing the required software, clone the project from GitHub.
+Follow these steps **only if the required development environment is not already installed**.
 
-Repository:
+If your environment is already properly configured, **skip directly to [Clone the Project](#2-clone-the-project)**.
 
-`https://github.com/Naim-006/GetMediBD.git`
+---
 
-Open **Git Bash / Terminal** and run:
+## 1. Download the Required Setup
+
+The required development environment and setup files are provided through the team's Google Drive.
+
+### Download
+
+**[Download Required Setup — Google Drive](YOUR_GOOGLE_DRIVE_LINK)**
+
+Download the complete setup package before starting the project.
+
+The package contains the required software and files needed for the development environment.
+
+> **Already installed and working?**
+> Skip this step and continue with the repository setup.
+
+---
+
+## 2. Install the Required Environment
+
+Install the required software from the provided Google Drive package.
+
+After installation:
+
+1. Open Android Studio.
+2. Make sure Android Studio starts correctly.
+3. Make sure the required Java/Android components are available.
+4. Make sure an Android emulator or physical Android device is available for testing.
+
+Do not create a new Android project.
+
+---
+
+## 3. Clone the Project
+
+All five team members have already been added as **collaborators** to the repository.
+
+Therefore, there is **no need to fork the repository**.
+
+Clone the original repository directly:
 
 ```bash
 git clone https://github.com/Naim-006/GetMediBD.git
 ```
 
-Then enter the project folder:
+Enter the project directory:
 
 ```bash
 cd GetMediBD
 ```
 
-Open the cloned project in **Android Studio**.
+### Repository
 
-> **Do not create a new project.**
->
-> Open the project that you cloned from GitHub.
-
----
-
-# 👥 3. Repository Access
-
-All **5 team members have already been added as collaborators** to the GitHub repository.
-
-Therefore:
-
-* No fork is required.
-* Do not create another repository.
-* Clone the original repository directly.
-* Everyone works on the same repository using their assigned branch.
+**GitHub:**
+https://github.com/Naim-006/GetMediBD
 
 ---
 
-# 🌿 4. Branch Structure
+## 4. Open the Project
+
+Open Android Studio.
+
+Select:
+
+```text
+Open
+```
+
+Then select the cloned:
+
+```text
+GetMediBD
+```
+
+project folder.
+
+Allow Android Studio to:
+
+* Sync the project
+* Download required dependencies
+* Index the project
+* Complete the initial build
+
+After synchronization, run the application and make sure the project builds successfully.
+
+---
+
+# Team Workflow
+
+The repository is shared by **5 developers**.
+
+Each developer has their own development branch.
+
+```text
+                         main
+                           |
+        +------------------+------------------+
+        |         |         |         |        |
+     Branch 1  Branch 2  Branch 3  Branch 4  Branch 5
+        |         |         |         |        |
+        +---------+---------+---------+--------+
+                           |
+                    Pull Request
+                           |
+                        Review
+                           |
+                        Approved
+                           |
+                           v
+                          main
+```
+
+---
+
+# Branch Structure
 
 The repository contains:
 
 ```text
 main
-│
-├── branch--naim
-├── branch--ajmine
-├── branch--rezuan
-├── branch--asha
-└── branch--jhuma
+├── member-1
+├── member-2
+├── member-3
+├── member-4
+└── member-5
 ```
+
+Replace the example branch name with your actual assigned branch.
 
 ### `main`
 
-The `main` branch is the **stable branch**.
+`main` is the stable branch.
 
-Do not directly develop or push your work to `main`.
+**Do not develop directly on `main`.**
 
-### Your Assigned Branch
+### Assigned Branch
 
-Each team member has one dedicated branch.
-
-You should work only on your assigned branch unless the team leader gives different instructions.
+Every developer works on their own assigned branch.
 
 ---
 
-# 🔄 5. Before Starting Your Work
+# Development Process
 
-First make sure you are on your assigned branch:
+## 1. Switch to Your Branch
 
 ```bash
 git checkout your-branch
-```
-
-Then get the latest changes:
-
-```bash
-git pull
 ```
 
 Example:
 
 ```bash
 git checkout member-1
+```
+
+---
+
+## 2. Get the Latest Changes
+
+Before starting your work:
+
+```bash
 git pull
 ```
 
-Always pull the latest changes before starting new work.
+This ensures your branch has the latest available changes.
 
 ---
 
-# 💻 6. Work on Your Feature
+## 3. Develop Your Feature
 
-Now work normally in Android Studio.
-
-For example:
+Work on your assigned feature in Android Studio.
 
 ```text
-Create UI
-↓
-Write Java code
-↓
-Connect Supabase
-↓
-Test the feature
-↓
-Fix issues
+Develop
+   ↓
+Test
+   ↓
+Fix
+   ↓
+Commit
+   ↓
+Push
 ```
 
-Try to keep your changes related to the feature you are working on.
+Avoid making unrelated changes to other features.
 
 ---
 
-# 📌 7. Check Your Changes
-
-After finishing your work, check what changed:
+## 4. Check Your Changes
 
 ```bash
 git status
 ```
 
-Review the changes before committing.
+Review the files that were modified.
 
 ---
 
-# ➕ 8. Add Your Changes
+## 5. Add Changes
 
 ```bash
 git add .
@@ -243,17 +382,15 @@ git add .
 
 ---
 
-# 💾 9. Commit Your Changes
+## 6. Commit Changes
 
-Create a clear commit message describing what you changed.
-
-Example:
+Use a meaningful commit message.
 
 ```bash
 git commit -m "Add customer login screen"
 ```
 
-Other examples:
+### Good examples
 
 ```bash
 git commit -m "Add pharmacy registration"
@@ -264,32 +401,32 @@ git commit -m "Implement medicine search"
 ```
 
 ```bash
-git commit -m "Fix order calculation"
+git commit -m "Add customer order history"
+```
+
+```bash
+git commit -m "Fix pharmacy inventory update"
 ```
 
 Avoid messages such as:
 
 ```text
 update
-changes
 done
+changes
 final
 test
 ```
 
-Use a message that explains the actual change.
-
 ---
 
-# ⬆️ 10. Push Your Branch
-
-Push your changes to your assigned branch:
+## 7. Push Your Branch
 
 ```bash
 git push
 ```
 
-If it is the first push for the branch:
+For the first push of a new branch:
 
 ```bash
 git push -u origin your-branch
@@ -297,50 +434,55 @@ git push -u origin your-branch
 
 ---
 
-# 🔀 11. Create a Pull Request
+# Pull Request & Code Review
 
-After pushing your completed feature:
+After completing your feature:
 
-1. Go to the GitHub repository.
-2. Open your branch.
-3. Click **Compare & pull request**.
-4. Set the destination branch to:
+1. Push your branch to GitHub.
+2. Open the GetMedBD repository.
+3. Select your branch.
+4. Create a **Pull Request**.
+5. Set the target branch to `main`.
+6. Describe what you changed.
+7. Request a code review.
 
-```text
-main
-```
-
-5. Write a short description of your changes.
-6. Create the Pull Request.
-7. Request a review from the appropriate team member/team leader.
-
-### Important
-
-Do **not** directly merge your own Pull Request unless the team has agreed to do so.
-
-The Pull Request should be reviewed first.
+### Pull Request Flow
 
 ```text
 Your Branch
-     │
-     │ Push
-     ▼
+     |
+     | git push
+     v
   GitHub
-     │
-     │ Pull Request
-     ▼
-  Code Review
-     │
-     │ Approved
-     ▼
-   main
+     |
+     | Pull Request
+     v
+ Code Review
+     |
+     +---- Changes Required
+     |          |
+     |          v
+     |      Fix & Push
+     |          |
+     |          +------> Review
+     |
+     +---- Approved
+                |
+                v
+           Merge → main
 ```
+
+Do not merge unreviewed work into `main`.
+
+If the reviewer requests changes, make the changes on the **same branch** and push again.
+
+The existing Pull Request will automatically update.
 
 ---
 
-# 🔄 12. After Your Pull Request Is Merged
+# After a Pull Request Is Merged
 
-Once your changes are merged into `main`, update your local repository before starting another feature.
+After your feature has been merged into `main`, update your local repository.
 
 ```bash
 git checkout main
@@ -353,76 +495,25 @@ Then return to your assigned branch:
 git checkout your-branch
 ```
 
-Get the latest `main` changes into your branch:
+Update your branch with the latest `main`:
 
 ```bash
 git merge main
 ```
 
-If there are conflicts, resolve them before continuing your work.
+If Git reports conflicts, resolve them before continuing development.
 
 ---
 
-# ⚠️ Important Git Rules
+# Daily Git Commands
 
-### ❌ Do not directly push to `main`
-
-Always use your assigned branch.
-
-### ❌ Do not force push
-
-Avoid:
-
-```bash
-git push --force
-```
-
-unless the team leader specifically asks you to do it.
-
-### ❌ Do not delete another member's branch
-
-### ❌ Do not overwrite another member's work
-
-### ❌ Do not commit secrets
-
-Never commit:
-
-* API keys
-* Passwords
-* Access tokens
-* Database credentials
-* Private keys
-* `.env` files containing secrets
-
-### ✅ Pull before starting work
-
-```bash
-git pull
-```
-
-### ✅ Commit regularly
-
-Don't wait until the entire project is finished before committing.
-
-### ✅ Use meaningful commit messages
-
-Explain what your commit actually changes.
-
-### ✅ Test before creating a Pull Request
-
-Make sure your feature works before asking others to review it.
-
----
-
-# 📋 Daily Git Workflow
-
-For normal development, remember this:
+The normal development cycle is:
 
 ```bash
 git checkout your-branch
 git pull
 
-# Work on your feature...
+# Develop your feature
 
 git status
 git add .
@@ -430,124 +521,142 @@ git commit -m "Describe your changes"
 git push
 ```
 
-Then create a **Pull Request → Review → Merge into `main`**.
-
----
-
-# 🌳 Team Workflow
+Then:
 
 ```text
-                    main
-                     │
-       ┌─────────────┼─────────────┐
-       │             │             │
-   Member 1      Member 2      Member 3
-       │             │             │
-       │             │             │
-      PR            PR            PR
-       │             │             │
-       └─────────────┼─────────────┘
-                     │
-                  Review
-                     │
-                     ▼
-                    main
-
-       + Member 4
-       + Member 5
+Pull Request
+     ↓
+Code Review
+     ↓
+Approval
+     ↓
+Merge into main
 ```
-
-Each member develops independently on their assigned branch.
-
-All completed features go through **Pull Request + Code Review** before being merged into `main`.
 
 ---
 
-# 📁 Project Structure
+# Team Rules
 
-The project will generally follow the Android project structure:
+### Do
+
+* Pull before starting development.
+* Work only on your assigned branch.
+* Use meaningful commit messages.
+* Test your feature before creating a Pull Request.
+* Review Pull Requests when assigned.
+* Keep `main` stable.
+* Communicate before making major project-wide changes.
+
+### Don't
+
+* Do not directly push to `main`.
+* Do not force push.
+* Do not delete another developer's branch.
+* Do not overwrite another developer's work.
+* Do not commit API keys or passwords.
+* Do not commit database credentials.
+* Do not commit private tokens or secret configuration.
+* Do not make unrelated changes inside another developer's feature.
+
+Never use:
+
+```bash
+git push --force
+```
+
+unless explicitly instructed by the team leader.
+
+---
+
+# Backend
+
+GetMedBD uses **Supabase** as its backend platform.
 
 ```text
-GetMediBD/
-│
-├── app/
-│   └── src/
-│
-├── gradle/
-├── build.gradle
-├── settings.gradle
-└── README.md
+                    Android App
+                         |
+                       Java
+                         |
+                  +------+------+
+                  |   Supabase  |
+                  +------+------+
+                         |
+        +----------------+----------------+
+        |                |                |
+     Auth          PostgreSQL         Storage
+        |                |                |
+        +----------------+----------------+
+                         |
+                     Realtime
 ```
 
-The exact structure may change as development progresses.
+Supabase provides:
+
+* Authentication
+* Database
+* File storage
+* Realtime functionality
+* Backend infrastructure
+
+Additional external services can be integrated when required.
 
 ---
 
-# 🔐 Backend
+# Project Roadmap
 
-GetMedBD uses **Supabase** as the backend platform.
+## Phase 1 — Foundation
 
-It will provide:
-
-```text
-Android App
-     │
-     └── Supabase
-          ├── Authentication
-          ├── PostgreSQL Database
-          ├── Storage
-          └── Realtime
-```
-
-Additional services such as Firebase, Maps, payment services, and AI services may be integrated as development progresses.
-
----
-
-# 🚧 Development Roadmap
-
-The project will be developed progressively.
-
-### Phase 1
-
-* Project setup
+* Android project setup
 * Authentication
 * User roles
-* Basic UI
 * Database structure
+* Navigation
+* Basic UI
 
-### Phase 2
+## Phase 2 — Marketplace
 
-* Customer features
-* Pharmacy features
+* Customer portal
+* Pharmacy portal
 * Medicine catalog
 * Inventory
-* Cart and orders
+* Search
+* Cart
+* Orders
 
-### Phase 3
+## Phase 3 — Advanced Features
 
-* Prescription system
+* Prescription upload
 * AI-assisted prescription processing
-* Payments
-* Notifications
 * Pharmacy verification
+* Payment integration
+* Notifications
+* Ratings and reviews
+* Delivery tracking
 
-### Phase 4
+## Phase 4 — Management
 
-* Admin and SuperAdmin management
-* Reports and analytics
-* Reviews and ratings
-* Delivery features
-* Advanced marketplace features
+* Admin portal
+* SuperAdmin portal
+* Reports
+* Analytics
+* Commission management
+* Audit logs
+* Advanced marketplace management
 
 ---
 
-# 📌 Repository
+# Repository
 
-**GitHub:**
-`https://github.com/Naim-006/GetMediBD.git`
+<p align="center">
+  <a href="https://github.com/Naim-006/GetMediBD">
+    <img src="https://img.shields.io/badge/GitHub-GetMediBD-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
 
 ---
 
-## 💊 GetMedBD
-
-**One marketplace. Multiple pharmacies. Better access to medicines.**
+<p align="center">
+  <strong>GetMedBD</strong>
+  <br>
+  Multi-Vendor Online Pharmacy Marketplace
+</p>
