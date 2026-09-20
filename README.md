@@ -155,11 +155,11 @@ The repository contains:
 ```text
 main
 │
-├── branch-1-naim
-├── branch-2-ajmine
-├── branch-3-rezuan
-├── branch-4-asha
-└── branch-5-jhuma
+├── branch--naim
+├── branch--ajmine
+├── branch--rezuan
+├── branch--asha
+└── branch--jhuma
 ```
 
 ### `main`
