@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  An Android marketplace connecting customers with verified pharmacies.
+  An Android marketplace connecting customers with verified pharmacies 
 </p>
 
 <p align="center">
@@ -443,7 +443,7 @@ git push -u origin your-branch
 After completing your feature:
 
 1. Push your branch to GitHub.
-2. Open the GetMedBD repository.
+2. Open the GetMediBD repository.
 3. Select your branch.
 4. Create a **Pull Request**.
 5. Set the target branch to `main`.
@@ -574,7 +574,7 @@ unless explicitly instructed by the team leader.
 
 # Backend
 
-GetMedBD uses **Supabase** as its backend platform.
+GetMediBD uses **Supabase** as its backend platform.
 
 ```text
                     Android App
@@ -660,7 +660,7 @@ Additional external services can be integrated when required.
 ---
 
 <p align="center">
-  <strong>GetMedBD</strong>
+  <strong>GetMediBD</strong>
   <br>
   Multi-Vendor Online Pharmacy Marketplace
 </p>
