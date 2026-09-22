@@ -46,6 +46,22 @@
         <activity
             android:name=".superadmin.dashboard.SuperAdminDashboardActivity"
             android:exported="false" />
+            
+        <activity
+            android:name=".rider.dashboard.RiderDashboardActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".rider.profile.RiderProfileActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".rider.verification.ProofOfDeliveryActivity"
+            android:exported="false" />
+            
+        <service
+            android:name=".rider.tracking.RiderLocationService"
+            android:exported="false" />
     </application>
 
 </manifest>
