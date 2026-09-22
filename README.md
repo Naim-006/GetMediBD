@@ -479,11 +479,11 @@ The repository contains:
 
 ```text
 main
-├── member-1
-├── member-2
-├── member-3
-├── member-4
-└── member-5
+├── branch--naim
+├── Branch--ajmine
+├── Branch--rejuan
+├── Branch-ASha
+└── Branch--Jhuma
 ```
 
 Replace the example branch name with your actual assigned branch.
