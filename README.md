@@ -211,7 +211,7 @@ The platform contains five portals:
 | Ajmine | 252-15-172 | Customer Portal, ADB Services | `Branch--Ajmine` |
 | Rezuan | 252-15-045 | Database, Admin Portal | `Branch--Rezuan` |
 | Jhuma | 252-15-713 | Rider portal | `Branch--Jhuma` |
-| Asha | 252-15-172 | SuperAdmin portal | `Branch--Asha` |
+| Asha | 252-15-179 | SuperAdmin portal | `Branch--Asha` |
 | All Members | — | Core, Assets, Resources | All branches |
 
 ### Project Folder Structure
@@ -286,7 +286,7 @@ GetMedBD/
 │   │       │           │   │   ├── complaints/
 │   │       │           │   │   └── reports/
 │   │       │           │   │
-│   │       │           │   └── superintendent/     # Asha-172
+│   │       │           │   └── superintendent/     # Asha-179
 │   │       │           │       ├── dashboard/
 │   │       │           │       ├── admins/
 │   │       │           │       ├── permissions/
