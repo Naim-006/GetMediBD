@@ -16,6 +16,7 @@ public class AppConstants {
     // User Roles
     public static final String ROLE_CUSTOMER = "customer";
     public static final String ROLE_PHARMACY = "pharmacy";
+    public static final String ROLE_RIDER = "rider";
     public static final String ROLE_ADMIN = "admin";
     public static final String ROLE_SUPERADMIN = "superadmin";
     
@@ -26,6 +27,13 @@ public class AppConstants {
     public static final String ORDER_SHIPPED = "shipped";
     public static final String ORDER_DELIVERED = "delivered";
     public static final String ORDER_CANCELLED = "cancelled";
+
+    // Delivery Status
+    public static final String DELIVERY_ASSIGNED = "assigned";
+    public static final String DELIVERY_PICKED_UP = "picked_up";
+    public static final String DELIVERY_OUT_FOR_DELIVERY = "out_for_delivery";
+    public static final String DELIVERY_DELIVERED = "delivered";
+    public static final String DELIVERY_CANCELLED = "cancelled";
     
     // Prescription Status
     public static final String PRESCRIPTION_UPLOADED = "uploaded";
