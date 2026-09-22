@@ -1,5 +1,3 @@
----
-
 <h1 align="center">
   <img src="app/src/main/assets/logo.png" width="36">
   GetMediBD
@@ -28,6 +26,7 @@
   <a href="#about">About</a> •
   <a href="#features">Features</a> •
   <a href="#technology-stack">Technology</a> •
+  <a href="#contribution">Contribution</a> •
   <a href="#setup">Setup</a> •
   <a href="#team-workflow">Team Workflow</a> •
   <a href="#development-roadmap">Roadmap</a>
@@ -199,6 +198,161 @@ The platform contains five portals:
 * GitHub Pull Requests
 
 > **Infrastructure:** No VPS or Docker is required for the initial project setup.
+
+---
+
+## Contribution
+
+### Team Contribution Overview
+
+| Contributor | ID | Responsibility | Main Folders | Branch |
+|-------------|----|----------------|--------------|--------|
+| Naim | Naim-178 | Database, Pharmacy Portal, ADB Services | `db/`, `portals/pharmacy/`, `adb/` | `member-1` |
+| Rezuan | Rezuan-045 | Database, Admin Portal | `db/`, `portals/admin/` | `member-2` |
+| Ajmine | Ajmine-172 | Customer Portal, ADB Services | `portals/customer/`, `adb/` | `member-3` |
+| Jhuma | Jhuma-713 | Rider / Delivery Portal | `portals/rider/` | `member-4` |
+| Asha | Asha-172 | SuperAdmin / Superintendent Portal | `portals/superintendent/` | `member-5` |
+| All Members | — | Core, Assets, Resources | `core/`, `assets/`, `res/` | All branches |
+
+> Branch names are examples. Replace them with the actual assigned branch names.
+
+### Project Folder Structure
+
+```text
+GetMedBD/
+│
+├── app/
+│   │
+│   ├── src/
+│   │   └── main/
+│   │       │
+│   │       ├── java/
+│   │       │   └── com/
+│   │       │       └── getmedbd/
+│   │       │           │
+│   │       │           ├── core/                  # All members
+│   │       │           │   ├── constants/
+│   │       │           │   ├── utils/
+│   │       │           │   ├── validation/
+│   │       │           │   ├── navigation/
+│   │       │           │   └── common/
+│   │       │           │
+│   │       │           ├── db/                    # Naim-178 & Rezuan-045
+│   │       │           │   ├── models/
+│   │       │           │   ├── remote/
+│   │       │           │   │   ├── supabase/
+│   │       │           │   │   ├── api/
+│   │       │           │   │   └── storage/
+│   │       │           │   └── local/
+│   │       │           │
+│   │       │           ├── portals/
+│   │       │           │   │
+│   │       │           │   ├── customer/           # Ajmine-172
+│   │       │           │   │   ├── home/
+│   │       │           │   │   ├── medicines/
+│   │       │           │   │   ├── pharmacies/
+│   │       │           │   │   ├── prescription/
+│   │       │           │   │   ├── cart/
+│   │       │           │   │   ├── checkout/
+│   │       │           │   │   ├── orders/
+│   │       │           │   │   ├── wishlist/
+│   │       │           │   │   ├── reviews/
+│   │       │           │   │   ├── addresses/
+│   │       │           │   │   └── profile/
+│   │       │           │   │
+│   │       │           │   ├── pharmacy/           # Naim-178
+│   │       │           │   │   ├── dashboard/
+│   │       │           │   │   ├── medicines/
+│   │       │           │   │   ├── inventory/
+│   │       │           │   │   ├── orders/
+│   │       │           │   │   ├── prescriptions/
+│   │       │           │   │   ├── earnings/
+│   │       │           │   │   ├── reviews/
+│   │       │           │   │   └── profile/
+│   │       │           │   │
+│   │       │           │   ├── rider/              # Jhuma-713
+│   │       │           │   │   ├── dashboard/
+│   │       │           │   │   ├── orders/
+│   │       │           │   │   ├── delivery/
+│   │       │           │   │   ├── earnings/
+│   │       │           │   │   └── profile/
+│   │       │           │   │
+│   │       │           │   ├── admin/              # Rejuan-045
+│   │       │           │   │   ├── dashboard/
+│   │       │           │   │   ├── users/
+│   │       │           │   │   ├── pharmacies/
+│   │       │           │   │   ├── medicines/
+│   │       │           │   │   ├── orders/
+│   │       │           │   │   ├── prescriptions/
+│   │       │           │   │   ├── payments/
+│   │       │           │   │   ├── complaints/
+│   │       │           │   │   └── reports/
+│   │       │           │   │
+│   │       │           │   └── superintendent/     # Asha-172
+│   │       │           │       ├── dashboard/
+│   │       │           │       ├── admins/
+│   │       │           │       ├── permissions/
+│   │       │           │       ├── settings/
+│   │       │           │       ├── audit/
+│   │       │           │       └── security/
+│   │       │           │
+│   │       │           └── adb/                    # Naim-178 & Ajmine-172
+│   │       │               ├── ai/
+│   │       │               ├── auth/
+│   │       │               ├── payment/
+│   │       │               ├── map/
+│   │       │               └── notification/
+│   │       │
+│   │       ├── assets/                             # All members
+│   │       │   ├── images/
+│   │       │   ├── icons/
+│   │       │   ├── animations/
+│   │       │   ├── fonts/
+│   │       │   ├── documents/
+│   │       │   └── config/
+│   │       │
+│   │       ├── res/                                # All members
+│   │       │   ├── drawable/
+│   │       │   │   ├── backgrounds/
+│   │       │   │   ├── buttons/
+│   │       │   │   ├── cards/
+│   │       │   │   ├── icons/
+│   │       │   │   └── shapes/
+│   │       │   ├── drawable-nodpi/
+│   │       │   ├── mipmap/
+│   │       │   ├── layout/
+│   │       │   ├── menu/
+│   │       │   ├── navigation/
+│   │       │   ├── anim/
+│   │       │   ├── animator/
+│   │       │   ├── font/
+│   │       │   ├── values/
+│   │       │   │   ├── colors.xml
+│   │       │   │   ├── strings.xml
+│   │       │   │   ├── dimens.xml
+│   │       │   │   ├── styles.xml
+│   │       │   │   └── themes.xml
+│   │       │   └── xml/
+│   │       │
+│   │       └── AndroidManifest.xml
+│   │
+│   ├── build.gradle
+│   ├── proguard-rules.pro
+│   └── consumer-rules.pro
+│
+├── gradle/
+│   ├── libs.versions.toml
+│   └── wrapper/
+│
+├── build.gradle
+├── settings.gradle
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── .gitignore
+├── README.md
+└── LICENSE
+```
 
 ---
 
