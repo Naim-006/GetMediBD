@@ -207,11 +207,11 @@ The platform contains five portals:
 
 | Contributor | ID | Responsibility | Main Folders | Branch |
 |-------------|----|----------------|--------------|--------|
-| Naim | Naim-178 | Database, Pharmacy Portal, ADB Services | `db/`, `portals/pharmacy/`, `adb/` | `member-1` |
-| Rezuan | Rezuan-045 | Database, Admin Portal | `db/`, `portals/admin/` | `member-2` |
-| Ajmine | Ajmine-172 | Customer Portal, ADB Services | `portals/customer/`, `adb/` | `member-3` |
-| Jhuma | Jhuma-713 | Rider / Delivery Portal | `portals/rider/` | `member-4` |
-| Asha | Asha-172 | SuperAdmin / Superintendent Portal | `portals/superintendent/` | `member-5` |
+| Naim | Naim-178 | Database, Pharmacy Portal, ADB Services | `db/`, `portals/pharmacy/`, `adb/` | `Branch--Naim` |
+| Rezuan | Rezuan-045 | Database, Admin Portal | `db/`, `portals/admin/` | `Branch--Rezuan` |
+| Ajmine | Ajmine-172 | Customer Portal, ADB Services | `portals/customer/`, `adb/` | `Branch--Ajmine` |
+| Jhuma | Jhuma-713 | Rider / Delivery Portal | `portals/rider/` | `Branch--Asha` |
+| Asha | Asha-172 | SuperAdmin / Superintendent Portal | `portals/superintendent/` | `Branch--Jhuma` |
 | All Members | — | Core, Assets, Resources | `core/`, `assets/`, `res/` | All branches |
 
 > Branch names are examples. Replace them with the actual assigned branch names.
@@ -296,7 +296,7 @@ GetMedBD/
 │   │       │           │       ├── audit/
 │   │       │           │       └── security/
 │   │       │           │
-│   │       │           └── adb/                    # Naim-178 & Ajmine-172
+│   │       │           └── adb/                    # Ajmine-172 & Naim-178
 │   │       │               ├── ai/
 │   │       │               ├── auth/
 │   │       │               ├── payment/
