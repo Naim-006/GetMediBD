@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
+        android:name=".GetMedBDApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -23,7 +24,7 @@
         tools:targetApi="31">
         
         <activity
-            android:name=".auth.LoginActivity"
+            android:name=".adb.auth.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,35 +33,35 @@
         </activity>
         
         <activity
-            android:name=".customer.home.MainActivity"
+            android:name=".portals.customer.home.MainActivity"
             android:exported="false" />
             
         <activity
-            android:name=".pharmacy.dashboard.PharmacyDashboardActivity"
+            android:name=".portals.pharmacy.dashboard.PharmacyDashboardActivity"
             android:exported="false" />
             
         <activity
-            android:name=".admin.dashboard.AdminDashboardActivity"
+            android:name=".portals.admin.dashboard.AdminDashboardActivity"
             android:exported="false" />
             
         <activity
-            android:name=".superadmin.dashboard.SuperAdminDashboardActivity"
+            android:name=".portals.superintendent.dashboard.SuperAdminDashboardActivity"
             android:exported="false" />
             
         <activity
-            android:name=".rider.dashboard.RiderDashboardActivity"
+            android:name=".portals.rider.dashboard.RiderDashboardActivity"
             android:exported="false" />
             
         <activity
-            android:name=".rider.profile.RiderProfileActivity"
+            android:name=".portals.rider.profile.RiderProfileActivity"
             android:exported="false" />
             
         <activity
-            android:name=".rider.verification.ProofOfDeliveryActivity"
+            android:name=".portals.rider.verification.ProofOfDeliveryActivity"
             android:exported="false" />
             
         <service
-            android:name=".rider.tracking.RiderLocationService"
+            android:name=".portals.rider.tracking.RiderLocationService"
             android:exported="false" />
     </application>
 
