@@ -54,4 +54,22 @@
     <string name="manage_pharmacies">Manage Pharmacies</string>
     <string name="reports">Reports</string>
     <string name="complaints">Complaints</string>
+    
+    <!-- Rider / Delivery -->
+    <string name="rider_dashboard">Rider Dashboard</string>
+    <string name="active_deliveries">Active Deliveries</string>
+    <string name="rider_earnings">Rider Earnings</string>
+    <string name="delivery_history">Delivery History</string>
+    <string name="proof_of_delivery">Proof of Delivery</string>
+    <string name="accept_delivery">Accept Delivery</string>
+    <string name="reject_delivery">Reject Delivery</string>
+    <string name="start_delivery">Start Delivery</string>
+    <string name="complete_delivery">Complete Delivery</string>
+    
+    <!-- Prescription OCR & AI Matcher -->
+    <string name="scan_prescription">Scan Prescription</string>
+    <string name="scanning_prescription">Scanning prescription with OCR…</string>
+    <string name="analyzing_handwriting">Analyzing doctor handwriting with AI…</string>
+    <string name="matching_medicines">Matching medicines with catalog…</string>
+    <string name="matched_medicines">Matched Medicines</string>
 </resources>
