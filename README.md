@@ -210,8 +210,8 @@ The platform contains five portals:
 | Naim | 252-15-178 | Database, Pharmacy Portal, ADB Services | `Branch--Naim` |
 | Ajmine | 252-15-172 | Customer Portal, ADB Services | `Branch--Ajmine` |
 | Rezuan | 252-15-045 | Database, Admin Portal | `Branch--Rezuan` |
-| Jhuma | 252-15-713 | Rider / Delivery Portal | `Branch--Asha` |
-| Asha | 252-15-172 | SuperAdmin / Superintendent Portal | `Branch--Jhuma` |
+| Jhuma | 252-15-713 | Rider portal | `Branch--Jhuma` |
+| Asha | 252-15-172 | SuperAdmin portal | `Branch--Asha` |
 | All Members | — | Core, Assets, Resources | All branches |
 
 ### Project Folder Structure
