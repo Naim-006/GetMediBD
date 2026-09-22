@@ -1,4 +1,10 @@
-# GetMediBD
+---
+
+<h1 align="center">
+  <img src="app/src/main/assets/logo.png" width="36">
+  GetMediBD
+</h1>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
@@ -15,7 +21,7 @@
 </p>
 
 <p align="center">
-  An Android marketplace connecting customers with verified pharmacies.
+  An Android marketplace connecting customers with verified pharmacies 
 </p>
 
 <p align="center">
@@ -31,7 +37,7 @@
 
 ## About
 
-**GetMedBD** is an Android-based multi-vendor pharmacy marketplace designed to connect customers with verified pharmacies through a single platform.
+**GetMediBD** is an Android-based multi-vendor pharmacy marketplace designed to connect customers with verified pharmacies through a single platform.
 
 Customers can discover medicines, compare pharmacy availability, upload prescriptions, place orders, make payments, and track their purchases.
 
@@ -193,16 +199,14 @@ The package contains the required software and files needed for the development 
 
 ---
 
-## 2. Install the Required Environment
+## 2. Install the Required IDE (Neatbean)
 
 Install the required software from the provided Google Drive package.
 
 After installation:
 
-1. Open Android Studio.
-2. Make sure Android Studio starts correctly.
-3. Make sure the required Java/Android components are available.
-4. Make sure an Android emulator or physical Android device is available for testing.
+1. Open neatbean.
+2. Make sure neatbean starts correctly.
 
 Do not create a new Android project.
 
@@ -235,7 +239,7 @@ https://github.com/Naim-006/GetMediBD
 
 ## 4. Open the Project
 
-Open Android Studio.
+Open neatbean.
 
 Select:
 
@@ -439,7 +443,7 @@ git push -u origin your-branch
 After completing your feature:
 
 1. Push your branch to GitHub.
-2. Open the GetMedBD repository.
+2. Open the GetMediBD repository.
 3. Select your branch.
 4. Create a **Pull Request**.
 5. Set the target branch to `main`.
@@ -570,7 +574,7 @@ unless explicitly instructed by the team leader.
 
 # Backend
 
-GetMedBD uses **Supabase** as its backend platform.
+GetMediBD uses **Supabase** as its backend platform.
 
 ```text
                     Android App
@@ -656,7 +660,7 @@ Additional external services can be integrated when required.
 ---
 
 <p align="center">
-  <strong>GetMedBD</strong>
+  <strong>GetMediBD</strong>
   <br>
   Multi-Vendor Online Pharmacy Marketplace
 </p>
