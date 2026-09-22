@@ -205,14 +205,14 @@ The platform contains five portals:
 
 ### Team Contribution Overview
 
-| Contributor | ID | Responsibility | Main Folders | Branch |
+| Contributor | ID | Responsibility | Branch |
 |-------------|----|----------------|--------------|--------|
-| Naim | Naim-178 | Database, Pharmacy Portal, ADB Services | `db/`, `portals/pharmacy/`, `adb/` | `Branch--Naim` |
-| Rezuan | Rezuan-045 | Database, Admin Portal | `db/`, `portals/admin/` | `Branch--Rezuan` |
-| Ajmine | Ajmine-172 | Customer Portal, ADB Services | `portals/customer/`, `adb/` | `Branch--Ajmine` |
-| Jhuma | Jhuma-713 | Rider / Delivery Portal | `portals/rider/` | `Branch--Asha` |
-| Asha | Asha-172 | SuperAdmin / Superintendent Portal | `portals/superintendent/` | `Branch--Jhuma` |
-| All Members | — | Core, Assets, Resources | `core/`, `assets/`, `res/` | All branches |
+| Naim | 252-15-178 | Database, Pharmacy Portal, ADB Services | `Branch--Naim` |
+| Ajmine | 252-15-172 | Customer Portal, ADB Services | `Branch--Ajmine` |
+| Rezuan | 252-15-045 | Database, Admin Portal | `Branch--Rezuan` |
+| Jhuma | 252-15-713 | Rider / Delivery Portal | `Branch--Asha` |
+| Asha | 252-15-172 | SuperAdmin / Superintendent Portal | `Branch--Jhuma` |
+| All Members | — | Core, Assets, Resources | All branches |
 
 > Branch names are examples. Replace them with the actual assigned branch names.
 
