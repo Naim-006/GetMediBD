@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    
+    <!-- Text Size -->
+    <dimen name="text_xs">12sp</dimen>
+    <dimen name="text_sm">14sp</dimen>
+    <dimen name="text_md">16sp</dimen>
+    <dimen name="text_lg">18sp</dimen>
+    <dimen name="text_xl">20sp</dimen>
+    <dimen name="text_xx">24sp</dimen>
+    
+    <!-- Button Height -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_height_small">36dp</dimen>
+    
+    <!-- Border Radius -->
+    <dimen name="radius_sm">4dp</dimen>
+    <dimen name="radius_md">8dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    
+    <!-- Icon Size -->
+    <dimen name="icon_sm">16dp</dimen>
+    <dimen name="icon_md">24dp</dimen>
+    <dimen name="icon_lg">32dp</dimen>
+    <dimen name="icon_xl">48dp</dimen>
+    
+    <!-- Elevation -->
+    <dimen name="elevation_sm">2dp</dimen>
+    <dimen name="elevation_md">4dp</dimen>
+    <dimen name="elevation_lg">8dp</dimen>
+</resources>
