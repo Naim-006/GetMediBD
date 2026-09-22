@@ -1,3 +1,5 @@
+---
+
 <h1 align="center">
   <img src="app/src/main/assets/logo.png" width="36">
   GetMediBD
@@ -26,7 +28,6 @@
   <a href="#about">About</a> •
   <a href="#features">Features</a> •
   <a href="#technology-stack">Technology</a> •
-  <a href="#contribution">Contribution</a> •
   <a href="#setup">Setup</a> •
   <a href="#team-workflow">Team Workflow</a> •
   <a href="#development-roadmap">Roadmap</a>
@@ -201,159 +202,6 @@ The platform contains five portals:
 
 ---
 
-## Contribution
-
-### Team Contribution Overview
-
-| Contributor | ID | Responsibility | Branch |
-|-------------|----|----------------|--------|
-| Naim | 252-15-178 | Database, Pharmacy Portal, ADB Services | `Branch--Naim` |
-| Ajmine | 252-15-172 | Customer Portal, ADB Services | `Branch--Ajmine` |
-| Rezuan | 252-15-045 | Database, Admin Portal | `Branch--Rezuan` |
-| Jhuma | 252-15-713 | Rider portal | `Branch--Jhuma` |
-| Asha | 252-15-179 | SuperAdmin portal | `Branch--Asha` |
-| All Members | — | Core, Assets, Resources | All branches |
-
-### Project Folder Structure
-
-```text
-GetMedBD/
-│
-├── app/
-│   │
-│   ├── src/
-│   │   └── main/
-│   │       │
-│   │       ├── java/
-│   │       │   └── com/
-│   │       │       └── getmedbd/
-│   │       │           │
-│   │       │           ├── core/                  # All members
-│   │       │           │   ├── constants/
-│   │       │           │   ├── utils/
-│   │       │           │   ├── validation/
-│   │       │           │   ├── navigation/
-│   │       │           │   └── common/
-│   │       │           │
-│   │       │           ├── db/                    # Naim-178 & Rezuan-045
-│   │       │           │   ├── models/
-│   │       │           │   ├── remote/
-│   │       │           │   │   ├── supabase/
-│   │       │           │   │   ├── api/
-│   │       │           │   │   └── storage/
-│   │       │           │   └── local/
-│   │       │           │
-│   │       │           ├── portals/
-│   │       │           │   │
-│   │       │           │   ├── customer/           # Ajmine-172
-│   │       │           │   │   ├── home/
-│   │       │           │   │   ├── medicines/
-│   │       │           │   │   ├── pharmacies/
-│   │       │           │   │   ├── prescription/
-│   │       │           │   │   ├── cart/
-│   │       │           │   │   ├── checkout/
-│   │       │           │   │   ├── orders/
-│   │       │           │   │   ├── wishlist/
-│   │       │           │   │   ├── reviews/
-│   │       │           │   │   ├── addresses/
-│   │       │           │   │   └── profile/
-│   │       │           │   │
-│   │       │           │   ├── pharmacy/           # Naim-178
-│   │       │           │   │   ├── dashboard/
-│   │       │           │   │   ├── medicines/
-│   │       │           │   │   ├── inventory/
-│   │       │           │   │   ├── orders/
-│   │       │           │   │   ├── prescriptions/
-│   │       │           │   │   ├── earnings/
-│   │       │           │   │   ├── reviews/
-│   │       │           │   │   └── profile/
-│   │       │           │   │
-│   │       │           │   ├── rider/              # Jhuma-713
-│   │       │           │   │   ├── dashboard/
-│   │       │           │   │   ├── orders/
-│   │       │           │   │   ├── delivery/
-│   │       │           │   │   ├── earnings/
-│   │       │           │   │   └── profile/
-│   │       │           │   │
-│   │       │           │   ├── admin/              # Rejuan-045
-│   │       │           │   │   ├── dashboard/
-│   │       │           │   │   ├── users/
-│   │       │           │   │   ├── pharmacies/
-│   │       │           │   │   ├── medicines/
-│   │       │           │   │   ├── orders/
-│   │       │           │   │   ├── prescriptions/
-│   │       │           │   │   ├── payments/
-│   │       │           │   │   ├── complaints/
-│   │       │           │   │   └── reports/
-│   │       │           │   │
-│   │       │           │   └── superintendent/     # Asha-179
-│   │       │           │       ├── dashboard/
-│   │       │           │       ├── admins/
-│   │       │           │       ├── permissions/
-│   │       │           │       ├── settings/
-│   │       │           │       ├── audit/
-│   │       │           │       └── security/
-│   │       │           │
-│   │       │           └── adb/                    # Ajmine-172 & Naim-178
-│   │       │               ├── ai/
-│   │       │               ├── auth/
-│   │       │               ├── payment/
-│   │       │               ├── map/
-│   │       │               └── notification/
-│   │       │
-│   │       ├── assets/                             # All members
-│   │       │   ├── images/
-│   │       │   ├── icons/
-│   │       │   ├── animations/
-│   │       │   ├── fonts/
-│   │       │   ├── documents/
-│   │       │   └── config/
-│   │       │
-│   │       ├── res/                                # All members
-│   │       │   ├── drawable/
-│   │       │   │   ├── backgrounds/
-│   │       │   │   ├── buttons/
-│   │       │   │   ├── cards/
-│   │       │   │   ├── icons/
-│   │       │   │   └── shapes/
-│   │       │   ├── drawable-nodpi/
-│   │       │   ├── mipmap/
-│   │       │   ├── layout/
-│   │       │   ├── menu/
-│   │       │   ├── navigation/
-│   │       │   ├── anim/
-│   │       │   ├── animator/
-│   │       │   ├── font/
-│   │       │   ├── values/
-│   │       │   │   ├── colors.xml
-│   │       │   │   ├── strings.xml
-│   │       │   │   ├── dimens.xml
-│   │       │   │   ├── styles.xml
-│   │       │   │   └── themes.xml
-│   │       │   └── xml/
-│   │       │
-│   │       └── AndroidManifest.xml
-│   │
-│   ├── build.gradle
-│   ├── proguard-rules.pro
-│   └── consumer-rules.pro
-│
-├── gradle/
-│   ├── libs.versions.toml
-│   └── wrapper/
-│
-├── build.gradle
-├── settings.gradle
-├── gradle.properties
-├── gradlew
-├── gradlew.bat
-├── .gitignore
-├── README.md
-└── LICENSE
-```
-
----
-
 # Setup
 
 Follow these steps **only if the required development environment is not already installed**.
@@ -479,11 +327,11 @@ The repository contains:
 
 ```text
 main
-├── branch--naim
-├── Branch--ajmine
-├── Branch--rejuan
-├── Branch-ASha
-└── Branch--Jhuma
+├── member-1
+├── member-2
+├── member-3
+├── member-4
+└── member-5
 ```
 
 Replace the example branch name with your actual assigned branch.
