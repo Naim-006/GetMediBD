@@ -1,7 +1,5 @@
----
-
 <h1 align="center">
-  <img src="app/src/main/assets/logo.png" width="36">
+  <img src="app/src/main/assets/images/logo.png" width="36">
   GetMediBD
 </h1>
 
@@ -28,6 +26,7 @@
   <a href="#about">About</a> •
   <a href="#features">Features</a> •
   <a href="#technology-stack">Technology</a> •
+  <a href="#contribution">Contribution</a> •
   <a href="#setup">Setup</a> •
   <a href="#team-workflow">Team Workflow</a> •
   <a href="#development-roadmap">Roadmap</a>
@@ -43,14 +42,15 @@ Customers can discover medicines, compare pharmacy availability, upload prescrip
 
 Pharmacies can manage their products, inventory, orders, prescriptions, and sales through their own shop portal.
 
-The platform contains four portals:
+The platform contains five portals:
 
-| Portal              | Description                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------- |
-| **Customer**        | Browse medicines, compare pharmacies, order products, manage prescriptions and track orders |
-| **Shop / Pharmacy** | Manage pharmacy profile, medicines, inventory, orders and sales                             |
-| **Admin**           | Manage marketplace operations, users, pharmacies, medicines and orders                      |
-| **SuperAdmin**      | Manage administrators, permissions and system-wide configuration                            |
+| Portal              | Description                                                                                          |
+| ------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Customer**        | Browse medicines, compare pharmacies, order products, manage prescriptions and track orders          |
+| **Shop / Pharmacy** | Manage pharmacy profile, medicines, inventory, orders and sales                                      |
+| **Rider / Delivery**| Manage assigned deliveries, live route navigation, status updates, earnings, and proof of delivery  |
+| **Admin**           | Manage marketplace operations, users, pharmacies, medicines and orders                               |
+| **SuperAdmin**      | Manage administrators, permissions and system-wide configuration                                     |
 
 ---
 
@@ -65,8 +65,10 @@ The platform contains four portals:
 * Pharmacy-based medicine availability
 * Pharmacy price comparison
 * Nearby pharmacy discovery
-* Prescription upload
-* AI-assisted prescription analysis
+* Prescription upload (Camera & Gallery)
+* Prescription OCR scanning (Tesseract OCR)
+* AI-assisted prescription analysis & doctor handwriting recognition
+* Intelligent medicine matching with pharmacy inventory
 * Shopping cart
 * Multi-pharmacy ordering
 * Online payment
@@ -93,6 +95,30 @@ The platform contains four portals:
 * Sales and earnings
 * Customer reviews
 * Notifications
+
+## Rider / Delivery Portal
+
+* Rider registration and profile management
+* Identity and vehicle verification (NID, driving license, vehicle documents)
+* Online / offline availability toggle
+* Real-time delivery request alerts & acceptance/rejection
+* Pharmacy order pickup verification (QR code / pickup OTP)
+* Live turn-by-turn route navigation (Google Maps)
+* Real-time GPS location tracking for customer and pharmacy
+* Delivery status updates (Assigned, Picked Up, In Transit, Delivered)
+* Proof of delivery (Delivery OTP verification, photo proof, digital signature)
+* Cash-on-Delivery (COD) collection and remittance tracking
+* Daily, weekly earnings summary and payout history
+* Trip history and completed delivery logs
+* Performance ratings and customer reviews
+* Push notifications and system alerts
+
+## Prescription OCR & AI Medicine Matching System
+
+* **Tesseract OCR Engine:** Fast on-device optical character recognition to scan and extract text from printed prescriptions
+* **Handwriting AI API Fallback:** AI Vision API integration to read and decipher complex handwritten doctor prescriptions when OCR confidence is low
+* **Intelligent Medicine Matcher:** Robust string and fuzzy matching algorithm to cross-reference extracted medicine names, dosages, and strengths with the verified marketplace medicine catalog
+* **Automated Availability & Cart Integration:** Automatically checks matched medicines against nearby pharmacy inventories with price comparison and instant cart addition
 
 ## Admin Portal
 
@@ -156,8 +182,9 @@ The platform contains four portals:
 </p>
 
 * Firebase Cloud Messaging
-* Google Maps
-* AI API
+* Google Maps & GPS Geolocation
+* Tesseract OCR (On-device prescription scanning)
+* AI Vision API (Doctor handwriting recognition & medicine extraction)
 * Payment Gateway
 
 ### Development Tools
@@ -171,6 +198,159 @@ The platform contains four portals:
 * GitHub Pull Requests
 
 > **Infrastructure:** No VPS or Docker is required for the initial project setup.
+
+---
+
+## Contribution
+
+### Team Contribution Overview
+
+| Contributor | ID | Responsibility | Branch |
+|-------------|----|----------------|--------|
+| Naim | 252-15-178 | Database, Pharmacy Portal, ADB Services | `Branch--Naim` |
+| Ajmine | 252-15-172 | Customer Portal, ADB Services | `Branch--Ajmine` |
+| Rezuan | 252-15-045 | Database, Admin Portal | `Branch--Rezuan` |
+| Jhuma | 252-15-713 | Rider portal | `Branch--Jhuma` |
+| Asha | 252-15-179 | SuperAdmin portal | `Branch--Asha` |
+| All Members | — | Core, Assets, Resources | All branches |
+
+### Project Folder Structure
+
+```text
+GetMedBD/
+│
+├── app/
+│   │
+│   ├── src/
+│   │   └── main/
+│   │       │
+│   │       ├── java/
+│   │       │   └── com/
+│   │       │       └── getmedbd/
+│   │       │           │
+│   │       │           ├── core/                  # All members
+│   │       │           │   ├── constants/
+│   │       │           │   ├── utils/
+│   │       │           │   ├── validation/
+│   │       │           │   ├── navigation/
+│   │       │           │   └── common/
+│   │       │           │
+│   │       │           ├── db/                    # Naim-178 & Rezuan-045
+│   │       │           │   ├── models/
+│   │       │           │   ├── remote/
+│   │       │           │   │   ├── supabase/
+│   │       │           │   │   ├── api/
+│   │       │           │   │   └── storage/
+│   │       │           │   └── local/
+│   │       │           │
+│   │       │           ├── portals/
+│   │       │           │   │
+│   │       │           │   ├── customer/           # Ajmine-172
+│   │       │           │   │   ├── home/
+│   │       │           │   │   ├── medicines/
+│   │       │           │   │   ├── pharmacies/
+│   │       │           │   │   ├── prescription/
+│   │       │           │   │   ├── cart/
+│   │       │           │   │   ├── checkout/
+│   │       │           │   │   ├── orders/
+│   │       │           │   │   ├── wishlist/
+│   │       │           │   │   ├── reviews/
+│   │       │           │   │   ├── addresses/
+│   │       │           │   │   └── profile/
+│   │       │           │   │
+│   │       │           │   ├── pharmacy/           # Naim-178
+│   │       │           │   │   ├── dashboard/
+│   │       │           │   │   ├── medicines/
+│   │       │           │   │   ├── inventory/
+│   │       │           │   │   ├── orders/
+│   │       │           │   │   ├── prescriptions/
+│   │       │           │   │   ├── earnings/
+│   │       │           │   │   ├── reviews/
+│   │       │           │   │   └── profile/
+│   │       │           │   │
+│   │       │           │   ├── rider/              # Jhuma-713
+│   │       │           │   │   ├── dashboard/
+│   │       │           │   │   ├── orders/
+│   │       │           │   │   ├── delivery/
+│   │       │           │   │   ├── earnings/
+│   │       │           │   │   └── profile/
+│   │       │           │   │
+│   │       │           │   ├── admin/              # Rejuan-045
+│   │       │           │   │   ├── dashboard/
+│   │       │           │   │   ├── users/
+│   │       │           │   │   ├── pharmacies/
+│   │       │           │   │   ├── medicines/
+│   │       │           │   │   ├── orders/
+│   │       │           │   │   ├── prescriptions/
+│   │       │           │   │   ├── payments/
+│   │       │           │   │   ├── complaints/
+│   │       │           │   │   └── reports/
+│   │       │           │   │
+│   │       │           │   └── superintendent/     # Asha-179
+│   │       │           │       ├── dashboard/
+│   │       │           │       ├── admins/
+│   │       │           │       ├── permissions/
+│   │       │           │       ├── settings/
+│   │       │           │       ├── audit/
+│   │       │           │       └── security/
+│   │       │           │
+│   │       │           └── adb/                    # Ajmine-172 & Naim-178
+│   │       │               ├── ai/
+│   │       │               ├── auth/
+│   │       │               ├── payment/
+│   │       │               ├── map/
+│   │       │               └── notification/
+│   │       │
+│   │       ├── assets/                             # All members
+│   │       │   ├── images/
+│   │       │   ├── icons/
+│   │       │   ├── animations/
+│   │       │   ├── fonts/
+│   │       │   ├── documents/
+│   │       │   └── config/
+│   │       │
+│   │       ├── res/                                # All members
+│   │       │   ├── drawable/
+│   │       │   │   ├── backgrounds/
+│   │       │   │   ├── buttons/
+│   │       │   │   ├── cards/
+│   │       │   │   ├── icons/
+│   │       │   │   └── shapes/
+│   │       │   ├── drawable-nodpi/
+│   │       │   ├── mipmap/
+│   │       │   ├── layout/
+│   │       │   ├── menu/
+│   │       │   ├── navigation/
+│   │       │   ├── anim/
+│   │       │   ├── animator/
+│   │       │   ├── font/
+│   │       │   ├── values/
+│   │       │   │   ├── colors.xml
+│   │       │   │   ├── strings.xml
+│   │       │   │   ├── dimens.xml
+│   │       │   │   ├── styles.xml
+│   │       │   │   └── themes.xml
+│   │       │   └── xml/
+│   │       │
+│   │       └── AndroidManifest.xml
+│   │
+│   ├── build.gradle
+│   ├── proguard-rules.pro
+│   └── consumer-rules.pro
+│
+├── gradle/
+│   ├── libs.versions.toml
+│   └── wrapper/
+│
+├── build.gradle
+├── settings.gradle
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── .gitignore
+├── README.md
+└── LICENSE
+```
 
 ---
 
@@ -299,11 +479,11 @@ The repository contains:
 
 ```text
 main
-├── member-1
-├── member-2
-├── member-3
-├── member-4
-└── member-5
+├── branch--naim
+├── Branch--ajmine
+├── Branch--rejuan
+├── Branch-ASha
+└── Branch--Jhuma
 ```
 
 Replace the example branch name with your actual assigned branch.
@@ -629,13 +809,15 @@ Additional external services can be integrated when required.
 
 ## Phase 3 — Advanced Features
 
-* Prescription upload
-* AI-assisted prescription processing
+* Rider / Delivery portal
+* Prescription upload & Tesseract OCR scanning
+* AI doctor handwriting recognition fallback
+* Intelligent medicine matcher with catalog
 * Pharmacy verification
 * Payment integration
+* Real-time GPS delivery tracking & proof of delivery
 * Notifications
 * Ratings and reviews
-* Delivery tracking
 
 ## Phase 4 — Management
 
