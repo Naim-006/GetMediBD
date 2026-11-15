@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_active_delivery"
+        android:icon="@drawable/ic_delivery"
+        android:title="Active" />
+    <item
+        android:id="@+id/nav_requests"
+        android:icon="@drawable/ic_navigation"
+        android:title="Requests" />
+    <item
+        android:id="@+id/nav_earnings"
+        android:icon="@drawable/ic_earnings"
+        android:title="Earnings" />
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/ic_history"
+        android:title="History" />
+</menu>
