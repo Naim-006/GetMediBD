@@ -14,7 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.getmedbd.R;
 import com.getmedbd.db.models.Delivery;
+import com.getmedbd.portals.rider.dashboard.RiderDashboardActivity;
 import com.getmedbd.portals.rider.data.RiderRepository;
+import com.getmedbd.portals.rider.delivery.ActiveDeliveriesFragment;
 
 import java.util.List;
 
@@ -55,13 +57,21 @@ public class RiderOrdersFragment extends Fragment implements DeliveryRequestAdap
 
     @Override
     public void onAccept(Delivery delivery) {
-        // Will be connected with full active delivery workflow in Day 7
-        Toast.makeText(requireContext(), "Processing order #" + delivery.getOrderId() + "...", Toast.LENGTH_SHORT).show();
+        RiderRepository.getInstance().acceptRequest(delivery);
+        Toast.makeText(requireContext(), "Order #" + delivery.getOrderId() + " accepted! Navigate to pharmacy for pickup.", Toast.LENGTH_SHORT).show();
+
+        // Refresh stats and transition to active delivery screen
+        if (getActivity() instanceof RiderDashboardActivity) {
+            RiderDashboardActivity activity = (RiderDashboardActivity) getActivity();
+            activity.loadDashboardStats();
+            activity.loadFragment(new ActiveDeliveriesFragment());
+        }
     }
 
     @Override
     public void onReject(Delivery delivery) {
-        // Will be connected with decline workflow in Day 7
-        Toast.makeText(requireContext(), "Dismissing offer #" + delivery.getOrderId(), Toast.LENGTH_SHORT).show();
+        RiderRepository.getInstance().rejectRequest(delivery);
+        Toast.makeText(requireContext(), "Delivery request declined.", Toast.LENGTH_SHORT).show();
+        loadRequests();
     }
 }
