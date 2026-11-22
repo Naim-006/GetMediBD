@@ -1,5 +1,6 @@
 package com.getmedbd.portals.rider.delivery;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +18,7 @@ import androidx.fragment.app.Fragment;
 
 import com.getmedbd.R;
 import com.getmedbd.db.models.Delivery;
+import com.getmedbd.portals.rider.dashboard.RiderDashboardActivity;
 import com.getmedbd.portals.rider.data.RiderRepository;
 
 /**
@@ -138,6 +141,7 @@ public class ActiveDeliveriesFragment extends Fragment {
         if (Delivery.STATUS_ASSIGNED.equals(status)) {
             stepAssigned.setTextColor(getResources().getColor(R.color.primary));
             btnPrimaryAction.setText("1. Verify Pharmacy Pickup (Enter OTP)");
+            btnPrimaryAction.setOnClickListener(v -> showPickupOtpDialog(delivery));
 
         } else if (Delivery.STATUS_PICKED_UP.equals(status)) {
             stepAssigned.setTextColor(getResources().getColor(R.color.primary));
@@ -155,5 +159,33 @@ public class ActiveDeliveriesFragment extends Fragment {
             stepInTransit.setTextColor(getResources().getColor(R.color.primary));
             btnPrimaryAction.setText("3. Arrived! Open Proof of Delivery (POD)");
         }
+    }
+
+    private void showPickupOtpDialog(Delivery delivery) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+        builder.setTitle("Verify Pharmacy Pickup");
+        builder.setMessage("Ask the pharmacist for the 4-digit Pickup verification OTP (Hint: " + delivery.getPickupOtp() + "):");
+
+        final EditText input = new EditText(requireContext());
+        input.setHint("Enter 4-Digit OTP");
+        input.setInputType(android.text.InputType.TYPE_CLASS_NUMBER);
+        builder.setView(input);
+
+        builder.setPositiveButton("Verify & Collect", (dialog, which) -> {
+            String otp = input.getText().toString().trim();
+            boolean success = RiderRepository.getInstance().verifyPickup(otp);
+            if (success) {
+                Toast.makeText(requireContext(), "Pickup verified successfully! Package in your possession.", Toast.LENGTH_SHORT).show();
+                loadActiveDeliveryData();
+                if (getActivity() instanceof RiderDashboardActivity) {
+                    ((RiderDashboardActivity) getActivity()).loadDashboardStats();
+                }
+            } else {
+                Toast.makeText(requireContext(), "Invalid OTP! Please confirm with the pharmacy.", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
+        builder.show();
     }
 }
