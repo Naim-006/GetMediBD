@@ -20,6 +20,7 @@ import com.getmedbd.R;
 import com.getmedbd.db.models.Delivery;
 import com.getmedbd.portals.rider.dashboard.RiderDashboardActivity;
 import com.getmedbd.portals.rider.data.RiderRepository;
+import com.getmedbd.portals.rider.tracking.RiderLocationService;
 
 /**
  * Active Deliveries Fragment displaying live assigned order and 4-stage lifecycle stepper
@@ -105,6 +106,10 @@ public class ActiveDeliveriesFragment extends Fragment {
         tvPharmacyAddress.setText(delivery.getPharmacyAddress());
         tvPickupOtpHint.setText("🔑 Pharmacy Pickup Verification Code: " + delivery.getPickupOtp());
 
+        btnNavPharmacy.setOnClickListener(v -> RiderLocationService.openGoogleMapsNavigation(
+                requireContext(), delivery.getPharmacyLatitude(), delivery.getPharmacyLongitude(), delivery.getPharmacyName()
+        ));
+
         btnCallPharmacy.setOnClickListener(v -> {
             Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + delivery.getPharmacyPhone()));
             startActivity(callIntent);
@@ -119,6 +124,10 @@ public class ActiveDeliveriesFragment extends Fragment {
             tvCodAmount.setText("💳 Payment Status: Paid Online");
         }
         tvDeliveryFee.setText("Earnings: ৳" + String.format("%.2f", delivery.getDeliveryFee()));
+
+        btnNavCustomer.setOnClickListener(v -> RiderLocationService.openGoogleMapsNavigation(
+                requireContext(), delivery.getCustomerLatitude(), delivery.getCustomerLongitude(), delivery.getCustomerName()
+        ));
 
         btnCallCustomer.setOnClickListener(v -> {
             Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + delivery.getCustomerPhone()));

@@ -18,6 +18,7 @@ import com.getmedbd.portals.rider.earnings.RiderEarningsFragment;
 import com.getmedbd.portals.rider.history.DeliveryHistoryFragment;
 import com.getmedbd.portals.rider.orders.RiderOrdersFragment;
 import com.getmedbd.portals.rider.profile.RiderProfileActivity;
+import com.getmedbd.portals.rider.tracking.RiderLocationService;
 
 /**
  * Main Rider Dashboard Activity
@@ -44,6 +45,7 @@ public class RiderDashboardActivity extends AppCompatActivity {
         setupDutyToggle();
         setupBottomNavigation();
         loadDashboardStats();
+        startLocationTrackingService();
 
         // Load Active Deliveries fragment by default
         if (savedInstanceState == null) {
@@ -128,5 +130,14 @@ public class RiderDashboardActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.rider_fragment_container, fragment)
                 .commit();
+    }
+
+    private void startLocationTrackingService() {
+        try {
+            Intent serviceIntent = new Intent(this, RiderLocationService.class);
+            startService(serviceIntent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
