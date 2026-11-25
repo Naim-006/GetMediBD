@@ -21,6 +21,7 @@ import com.getmedbd.db.models.Delivery;
 import com.getmedbd.portals.rider.dashboard.RiderDashboardActivity;
 import com.getmedbd.portals.rider.data.RiderRepository;
 import com.getmedbd.portals.rider.tracking.RiderLocationService;
+import com.getmedbd.portals.rider.verification.ProofOfDeliveryActivity;
 
 /**
  * Active Deliveries Fragment displaying live assigned order and 4-stage lifecycle stepper
@@ -167,6 +168,10 @@ public class ActiveDeliveriesFragment extends Fragment {
             stepPickedUp.setTextColor(getResources().getColor(R.color.primary));
             stepInTransit.setTextColor(getResources().getColor(R.color.primary));
             btnPrimaryAction.setText("3. Arrived! Open Proof of Delivery (POD)");
+            btnPrimaryAction.setOnClickListener(v -> {
+                Intent podIntent = new Intent(requireContext(), ProofOfDeliveryActivity.class);
+                startActivity(podIntent);
+            });
         }
     }
 
