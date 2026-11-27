@@ -65,6 +65,20 @@
     <string name="reject_delivery">Reject Delivery</string>
     <string name="start_delivery">Start Delivery</string>
     <string name="complete_delivery">Complete Delivery</string>
+    <string name="rider_online">Online (Available)</string>
+    <string name="rider_offline">Offline</string>
+    <string name="pickup_otp">Pickup OTP</string>
+    <string name="delivery_otp">Delivery OTP</string>
+    <string name="verify_pickup">Verify Pickup</string>
+    <string name="confirm_pickup_otp">Confirm Pickup OTP</string>
+    <string name="enter_pickup_otp">Enter 4-Digit Pickup OTP</string>
+    <string name="enter_delivery_otp">Enter Customer 4-Digit Delivery OTP</string>
+    <string name="take_proof_photo">Take Delivery Photo Proof</string>
+    <string name="cod_to_collect">Cash to Collect (COD)</string>
+    <string name="cod_collected_confirm">I have collected the cash from customer</string>
+    <string name="navigate_maps">Navigate in Google Maps</string>
+    <string name="rider_profile">Rider Profile</string>
+    <string name="verified_rider">Verified Rider</string>
     
     <!-- Prescription OCR & AI Matcher -->
     <string name="scan_prescription">Scan Prescription</string>
